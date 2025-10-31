@@ -5,6 +5,14 @@
   font-style: normal;
 }
 
+.logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 html, body {
   background: rgb(245,219,221);
   position: relative;
