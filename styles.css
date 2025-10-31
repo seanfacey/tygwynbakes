@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'The Seasons';
+  src: url('fonts/theseasons-reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   background: rgb(245,219,221);
   position: relative;
@@ -5,40 +12,34 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 main {
   position: relative;
   top: 40%;
   transform: translateY(-50%);
   text-align: center;
 }
-
 h1 {
-  font-family: The Seasons;
+  font-family: 'The Seasons', serif;
   font-size: 52px;
   color: #3E3E3E;
   margin: 0;
   display: inline;
 }
-
 h2 {
-  font-family: The Seasons;
+  font-family: 'The Seasons', serif;
   font-size: 30px;
   color: #3E3E3E;
   margin: 0;
   display: inline;
 }
-
 a, a1, a:visited {
   font-family: Metric;
   color: #FFFFFF;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 /* Common styles for all containers */
 .location-container,
 .email-container{
@@ -48,13 +49,11 @@ a:hover {
   gap: 8px;
   width: 100%;
 }
-
 /* Add margin between the containers */
 .location-container,
 .email-container {
   margin-bottom: 12px;
 }
-
 /* Style for all icons */
 .location-icon,
 .email-icon,
@@ -63,7 +62,6 @@ a:hover {
   width: 24px;
   height: 24px;
 }
-
 /* Optional: styling for the location text */
 .location-container span {
   color: #555;
