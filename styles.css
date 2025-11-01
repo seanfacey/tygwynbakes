@@ -13,38 +13,13 @@ main {
   text-align: center;
 }
 
-/* Logo text styling */
-.logo-text {
-  margin-bottom: 0;
-}
-
-/* Logo text styling */
-.logo-text {
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 80px;
-  font-weight: 400;
-  color: #3E3E3E;
-  margin: 0;
-  padding: 0;
+/* Logo styling */
+.logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
   display: block;
-  line-height: 0.9;
-  letter-spacing: 0.02em;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 400;
-  color: #3E3E3E;
-  margin: 0;
-  padding: 0;
-  display: block;
-  line-height: 1;
-  letter-spacing: 0.08em;
+  margin: 0 auto 20px auto;
 }
 
 /* Links styling */
@@ -61,7 +36,8 @@ a:hover {
 
 /* Common styles for all containers */
 .location-container,
-.email-container {
+.email-container,
+.instagram-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +48,8 @@ a:hover {
 
 /* Style for all icons */
 .location-icon,
-.email-icon {
+.email-icon,
+.instagram-icon {
   color: #3E3E3E;
   width: 24px;
   height: 24px;
