@@ -18,26 +18,33 @@ main {
   margin-bottom: 0;
 }
 
+/* Logo text styling */
+.logo-text {
+  margin-bottom: 20px;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 72px;
+  font-size: 80px;
   font-weight: 400;
   color: #3E3E3E;
   margin: 0;
+  padding: 0;
   display: block;
-  line-height: 1;
+  line-height: 0.9;
   letter-spacing: 0.02em;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 400;
   color: #3E3E3E;
   margin: 0;
+  padding: 0;
   display: block;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 
 /* Links styling */
