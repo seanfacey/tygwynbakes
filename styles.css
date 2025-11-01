@@ -1,18 +1,3 @@
-@font-face {
-  font-family: 'The Seasons';
-  src: url('fonts/theseasons-reg.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.logo {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 html, body {
   background: rgb(245,218,221);
   position: relative;
@@ -20,57 +5,73 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 main {
   position: relative;
   top: 40%;
   transform: translateY(-50%);
   text-align: center;
 }
+
+/* Logo text styling */
+.logo-text {
+  margin-bottom: 0;
+}
+
 h1 {
-  font-family: 'The Seasons', serif;
-  font-size: 52px;
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 400;
   color: #3E3E3E;
   margin: 0;
-  display: inline;
+  display: block;
+  line-height: 1;
+  letter-spacing: 0.02em;
 }
+
 h2 {
-  font-family: 'The Seasons', serif;
-  font-size: 30px;
-  color: #  ;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #3E3E3E;
   margin: 0;
-  display: inline;
+  display: block;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
 }
-a, a1, a:visited {
-  font-family: Metric;
+
+/* Links styling */
+a, a:visited {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
   color: #3E3E3E;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 /* Common styles for all containers */
 .location-container,
-.email-container{
+.email-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
-}
-/* Add margin between the containers */
-.location-container,
-.email-container {
   margin-bottom: 12px;
 }
+
 /* Style for all icons */
 .location-icon,
-.email-icon,
-.linkedin-icon {
+.email-icon {
   color: #3E3E3E;
   width: 24px;
   height: 24px;
 }
+
 /* Optional: styling for the location text */
 .location-container span {
-  color: #555;
+  color: #3E3E3E;
 }
