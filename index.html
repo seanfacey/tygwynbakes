@@ -176,44 +176,8 @@
   }
 </style>
 
-<style>
-  #gate{position:fixed;inset:0;z-index:9999;background:#faf8f6;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;}
-  #gate.hiding{opacity:0;pointer-events:none;}
-  #site{display:none;}
-  .gate-logo{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:400;color:#2c2825;margin-bottom:0.3rem;}
-  .gate-logo span{color:#D4999A;}
-  .gate-tagline{font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:#a89b94;margin-bottom:3rem;}
-  .gate-box{display:flex;flex-direction:column;align-items:center;gap:0.8rem;width:100%;max-width:320px;padding:0 1.5rem;font-family:'Jost',sans-serif;}
-  .gate-label{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:#a89b94;align-self:flex-start;}
-  .gate-input{width:100%;background:white;border:1px solid #f0d0cc;padding:0.9rem 1.1rem;font-family:'Jost',sans-serif;font-size:1rem;color:#2c2825;outline:none;text-align:center;letter-spacing:0.15em;transition:border-color 0.2s;}
-  .gate-input:focus{border-color:#D4999A;}
-  .gate-btn{width:100%;background:#D4999A;color:white;border:none;padding:0.9rem;font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
-  .gate-btn:hover{background:#b87878;}
-  .gate-error{font-family:'Jost',sans-serif;font-size:0.78rem;color:#c97d6e;height:1rem;opacity:0;transition:opacity 0.2s;}
-  .gate-error.visible{opacity:1;}
-  .gate-footer{position:absolute;bottom:2rem;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.1em;color:#c8bdb8;text-transform:uppercase;}
-  .gate-divider{display:flex;align-items:center;gap:1rem;width:100%;margin:0.5rem 0;}
-  .gate-divider::before,.gate-divider::after{content:'';flex:1;height:1px;background:#f0d0cc;}
-  .gate-divider span{font-family:'Jost',sans-serif;font-size:0.6rem;letter-spacing:0.15em;color:#c8bdb8;text-transform:uppercase;white-space:nowrap;}
-  @keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
-  .shake{animation:shake 0.3s ease;}
-</style>
 </head>
 <body>
-<div id="gate">
-  <div class="gate-logo">Tŷ Gwyn <span>Bakes</span></div>
-  <p class="gate-tagline">A little sneak peek</p>
-  <div class="gate-box">
-    <div class="gate-divider"><span>Preview Access</span></div>
-    <label class="gate-label">Enter password to continue</label>
-    <input type="password" id="gate-input" class="gate-input" placeholder="••••••" autocomplete="off">
-    <p class="gate-error" id="gate-error">Oops — that’s not quite right!</p>
-    <button class="gate-btn" id="gate-btn">Enter →</button>
-  </div>
-  <p class="gate-footer">tygwynbakes.com · Coming soon</p>
-</div>
-<div id="site">
-
 <nav aria-label="Main navigation">
   <a href="#" class="nav-logo">Tŷ Gwyn <span>Bakes</span></a>
   <ul>
@@ -270,7 +234,7 @@
   <p>Based in Ware, Hertfordshire — but proudly Welsh at heart — Tŷ Gwyn Bakes (White House Bakes) was born from a lifelong love of baking and a desire to make those sweet moments in life a little more homemade.</p>
   <p>Allergen-friendly options are available — just mention any dietary requirements when you get in touch.</p>
   <div class="welsh-tag">📍 Based in Ware, Hertfordshire</div>
-  <div class="welsh-tag" style="margin-top:0.5rem">&#x1F3F4;&#xE0067;&#xE0062;&#xE0077;&#xE006C;&#xE0073;&#xE007F; Proudly Welsh · Wedi’i wneud â chariad</div>
+  <div class="welsh-tag" style="margin-top:0.5rem">&#x1F3F4;&#xE0067;&#xE0062;&#xE0077;&#xE006C;&#xE0073;&#xE007F; Proudly Welsh · Wedi'i wneud â chariad</div>
 </div></div></div></section>
 <section class="menu" id="menu" aria-label="Menu">
 <div class="container">
@@ -350,32 +314,6 @@
   window.addEventListener('scroll',function(){
     document.querySelector('nav').style.boxShadow=window.scrollY>50?'0 2px 20px rgba(0,0,0,0.08)':'none';
   });
-</script>
-
-</div>
-<script>
-  (function(){
-    var input=document.getElementById('gate-input');
-    var err=document.getElementById('gate-error');
-    var btn=document.getElementById('gate-btn');
-    function unlock(){
-      if(input.value.trim().toLowerCase()==='yummy'){
-        document.getElementById('gate').classList.add('hiding');
-        document.getElementById('site').style.display='block';
-        setTimeout(function(){document.getElementById('gate').style.display='none';},650);
-      }else{
-        err.classList.add('visible');
-        input.classList.add('shake');
-        input.value='';
-        setTimeout(function(){input.classList.remove('shake');},400);
-      }
-    }
-    btn.addEventListener('click',unlock);
-    input.addEventListener('keydown',function(e){
-      err.classList.remove('visible');
-      if(e.key==='Enter'){e.preventDefault();unlock();}
-    });
-  })();
 </script>
 </body>
 </html>
